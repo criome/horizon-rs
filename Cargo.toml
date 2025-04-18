@@ -2,7 +2,7 @@ cargo-features = ["edition2024"]
 
 [workspace]
 resolver = "2"
-members = [ "horizons-lib", "horizons-cli" ]
+members = [ "lib", "cli" ]
 
 [workspace.dependencies]
-horizons-lib = { path = "horizons-lib", workspace = true }
+horizons-lib = { path = "lib", workspace = true }
