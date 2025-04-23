@@ -1,10 +1,10 @@
 cargo-features = ["edition2024"]
 
 [package]
-name = "horizons-cli"
+name = "horizon-cli"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-horizons-lib.workspace = true
+horizon-lib.workspace = true
 

@@ -3,12 +3,12 @@
 version = 3
 
 [[package]]
-name = "horizons-cli"
+name = "horizon-cli"
 version = "0.1.0"
 dependencies = [
- "horizons-lib",
+ "horizon-lib",
 ]
 
 [[package]]
-name = "horizons-lib"
+name = "horizon-lib"
 version = "0.1.0"

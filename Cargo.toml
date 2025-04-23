@@ -5,4 +5,4 @@ resolver = "2"
 members = [ "lib", "cli" ]
 
 [workspace.dependencies]
-horizons-lib = { path = "lib", workspace = true }
+horizon-lib = { path = "lib", workspace = true }
