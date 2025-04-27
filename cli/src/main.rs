@@ -1,4 +1,4 @@
-use horizon_lib::HELLO;
+use horizon_lib::StructuredAttrs;
 
 fn main() {
     println!("{}", HELLO);

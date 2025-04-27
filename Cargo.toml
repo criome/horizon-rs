@@ -6,3 +6,6 @@ members = [ "lib", "cli" ]
 
 [workspace.dependencies]
 horizon-lib = { path = "lib", workspace = true }
+
+serde = { version = "*", features = ["derive"] }
+serde_json = { version = "*" }
