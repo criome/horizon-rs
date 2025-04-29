@@ -1,5 +1,3 @@
-cargo-features = ["edition2024"]
-
 [package]
 name = "horizon-cli"
 version = "0.1.0"
