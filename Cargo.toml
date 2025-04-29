@@ -9,3 +9,4 @@ horizon-lib = { path = "lib", workspace = true }
 
 serde = { version = "*", features = ["derive"] }
 serde_json = { version = "*" }
+anyhow = "1.0.98"
