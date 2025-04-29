@@ -1,0 +1,414 @@
+{
+  "nodes": {
+    "atom": {
+      "locked": {
+        "lastModified": 1745611759,
+        "narHash": "sha256-bXb5J2AXjq8u3wqA5LbTRDaYto9QmHNUH7kJ5ZTGDRI=",
+        "owner": "LiGoldragon",
+        "repo": "atom",
+        "rev": "5f85c3548627a7806963a757bcd24aa58824e5fb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LiGoldragon",
+        "ref": "testing",
+        "repo": "atom",
+        "type": "github"
+      }
+    },
+    "config": {
+      "inputs": {
+        "crane": "crane",
+        "make-atom": [
+          "horizon-cli",
+          "devenv-atom",
+          "make-atom"
+        ],
+        "nixpkgs": [
+          "horizon-cli",
+          "devenv-atom",
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay",
+        "src": "src",
+        "system": "system"
+      },
+      "locked": {
+        "lastModified": 1745618150,
+        "narHash": "sha256-vV2CKWTDSZ8Y15bYJ1Yi45wSK2wBi5p7+N6laPK/9kA=",
+        "owner": "criome",
+        "repo": "rust-atom",
+        "rev": "b0a5ee7335c597eabc6bf6bf41018f82aa858ca1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "ref": "testing",
+        "repo": "rust-atom",
+        "type": "github"
+      }
+    },
+    "crane": {
+      "locked": {
+        "lastModified": 1741481578,
+        "narHash": "sha256-JBTSyJFQdO3V8cgcL08VaBUByEU6P5kXbTJN6R0PFQo=",
+        "owner": "ipetkov",
+        "repo": "crane",
+        "rev": "bb1c9567c43e4434f54e9481eb4b8e8e0d50f0b5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ipetkov",
+        "repo": "crane",
+        "type": "github"
+      }
+    },
+    "crane_2": {
+      "locked": {
+        "lastModified": 1741481578,
+        "narHash": "sha256-JBTSyJFQdO3V8cgcL08VaBUByEU6P5kXbTJN6R0PFQo=",
+        "owner": "ipetkov",
+        "repo": "crane",
+        "rev": "bb1c9567c43e4434f54e9481eb4b8e8e0d50f0b5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ipetkov",
+        "repo": "crane",
+        "type": "github"
+      }
+    },
+    "devenv-atom": {
+      "inputs": {
+        "config": "config",
+        "make-atom": [
+          "horizon-cli",
+          "make-atom"
+        ],
+        "nixpkgs": [
+          "horizon-cli",
+          "nixpkgs"
+        ],
+        "system": "system_2"
+      },
+      "locked": {
+        "lastModified": 1745882308,
+        "narHash": "sha256-E7RLxOmPD0pOLwILhDyC0GIs3gtrQlgO/50uVKAu1vo=",
+        "owner": "criome",
+        "repo": "devenv-atom",
+        "rev": "777fdeedcd59c84c1076a95abbbf01c119249e04",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "ref": "testing",
+        "repo": "devenv-atom",
+        "type": "github"
+      }
+    },
+    "flake-compat": {
+      "locked": {
+        "lastModified": 1733328505,
+        "narHash": "sha256-NeCCThCEP3eCl2l/+27kNNK7QrwZB1IJCrXfrbv5oqU=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "ff81ac966bb2cae68946d5ed5fc4994f96d0ffec",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
+    "horizon-cli": {
+      "inputs": {
+        "devenv-atom": "devenv-atom",
+        "horizon-rs": "horizon-rs",
+        "make-atom": "make-atom",
+        "nixpkgs": "nixpkgs",
+        "rust-atom": "rust-atom",
+        "system": "system_4"
+      },
+      "locked": {
+        "lastModified": 1745882370,
+        "narHash": "sha256-sACouUt4OMoKqX//fR0Tm8XgasUMwZnj+Jq8tFTNH1c=",
+        "owner": "criome",
+        "repo": "horizon-cli",
+        "rev": "87813eebb43473084a4c61141f9531c567ebe62d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "ref": "testing",
+        "repo": "horizon-cli",
+        "type": "github"
+      }
+    },
+    "horizon-rs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1745788460,
+        "narHash": "sha256-NpALOvCIQ6tzQtlmGVmNxBrH/NKDzJwsvu+55nLPFQ8=",
+        "owner": "criome",
+        "repo": "horizon-rs",
+        "rev": "8c7465e2fcd73d9c5385702e01c77991c491ef66",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "ref": "testing",
+        "repo": "horizon-rs",
+        "type": "github"
+      }
+    },
+    "lib": {
+      "locked": {
+        "lastModified": 1745111456,
+        "narHash": "sha256-6k3oWdGcWOIzh3OQBkIf+HBU+xH5vbZtUhwzXEX4NWI=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "eab2ba94b72a8664e0fb92912160151d99db850e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "make-atom": {
+      "inputs": {
+        "atom": "atom",
+        "flake-compat": "flake-compat",
+        "lib": "lib",
+        "nixpkgs": [
+          "horizon-cli",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1745618134,
+        "narHash": "sha256-LVjdx+0iLrhmggH2CRyvsPYFgr6mBDtlFFPd8QGM6s4=",
+        "owner": "criome",
+        "repo": "make-atom",
+        "rev": "a5ea4413f85068290353d07322c159f717fd1b56",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "ref": "testing",
+        "repo": "make-atom",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1734649271,
+        "narHash": "sha256-4EVBRhOjMDuGtMaofAIqzJbg4Ql7Ai0PSeuVZTHjyKQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d70bd19e0a38ad4790d3913bf08fcbfc9eeca507",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "horizon-cli": "horizon-cli",
+        "system": "system_5"
+      }
+    },
+    "rust-atom": {
+      "inputs": {
+        "crane": "crane_2",
+        "make-atom": [
+          "horizon-cli",
+          "make-atom"
+        ],
+        "nixpkgs": [
+          "horizon-cli",
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay_2",
+        "src": "src_2",
+        "system": "system_3"
+      },
+      "locked": {
+        "lastModified": 1745618150,
+        "narHash": "sha256-vV2CKWTDSZ8Y15bYJ1Yi45wSK2wBi5p7+N6laPK/9kA=",
+        "owner": "criome",
+        "repo": "rust-atom",
+        "rev": "b0a5ee7335c597eabc6bf6bf41018f82aa858ca1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "ref": "testing",
+        "repo": "rust-atom",
+        "type": "github"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "horizon-cli",
+          "devenv-atom",
+          "config",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1741660300,
+        "narHash": "sha256-0jldJ58sC5RjqwpwE+ER+RPMeX4Moz5im/evQ3SU/dU=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "ac2f556db0eb5cbba3c4f5f5989c46330f439b0b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "rust-overlay_2": {
+      "inputs": {
+        "nixpkgs": [
+          "horizon-cli",
+          "rust-atom",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1741660300,
+        "narHash": "sha256-0jldJ58sC5RjqwpwE+ER+RPMeX4Moz5im/evQ3SU/dU=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "ac2f556db0eb5cbba3c4f5f5989c46330f439b0b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1745437863,
+        "narHash": "sha256-dS8tvq+jeUPtOo/vSVsKCTM7lnRtrtrJtA+XWVhgFgc=",
+        "owner": "criome",
+        "repo": "horizon-rs",
+        "rev": "a62fd92d41e2289e8e07b30aa94a5c9fef03f69e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "ref": "testing",
+        "repo": "horizon-rs",
+        "type": "github"
+      }
+    },
+    "src_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1745437863,
+        "narHash": "sha256-dS8tvq+jeUPtOo/vSVsKCTM7lnRtrtrJtA+XWVhgFgc=",
+        "owner": "criome",
+        "repo": "horizon-rs",
+        "rev": "a62fd92d41e2289e8e07b30aa94a5c9fef03f69e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "ref": "testing",
+        "repo": "horizon-rs",
+        "type": "github"
+      }
+    },
+    "system": {
+      "locked": {
+        "lastModified": 1741520211,
+        "narHash": "sha256-xHifvvYmRbOeUwQfo3D9mTHbh4oBmhg9iNhNGCuK8fk=",
+        "owner": "criome",
+        "repo": "system",
+        "rev": "ddffaa28acbcf95373bd8ed2d142ec9e6f6becbf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "repo": "system",
+        "type": "github"
+      }
+    },
+    "system_2": {
+      "locked": {
+        "lastModified": 1741520211,
+        "narHash": "sha256-xHifvvYmRbOeUwQfo3D9mTHbh4oBmhg9iNhNGCuK8fk=",
+        "owner": "criome",
+        "repo": "system",
+        "rev": "ddffaa28acbcf95373bd8ed2d142ec9e6f6becbf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "repo": "system",
+        "type": "github"
+      }
+    },
+    "system_3": {
+      "locked": {
+        "lastModified": 1741520211,
+        "narHash": "sha256-xHifvvYmRbOeUwQfo3D9mTHbh4oBmhg9iNhNGCuK8fk=",
+        "owner": "criome",
+        "repo": "system",
+        "rev": "ddffaa28acbcf95373bd8ed2d142ec9e6f6becbf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "repo": "system",
+        "type": "github"
+      }
+    },
+    "system_4": {
+      "locked": {
+        "lastModified": 1741520211,
+        "narHash": "sha256-xHifvvYmRbOeUwQfo3D9mTHbh4oBmhg9iNhNGCuK8fk=",
+        "owner": "criome",
+        "repo": "system",
+        "rev": "ddffaa28acbcf95373bd8ed2d142ec9e6f6becbf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "repo": "system",
+        "type": "github"
+      }
+    },
+    "system_5": {
+      "locked": {
+        "lastModified": 1741520211,
+        "narHash": "sha256-xHifvvYmRbOeUwQfo3D9mTHbh4oBmhg9iNhNGCuK8fk=",
+        "owner": "criome",
+        "repo": "system",
+        "rev": "ddffaa28acbcf95373bd8ed2d142ec9e6f6becbf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "repo": "system",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
