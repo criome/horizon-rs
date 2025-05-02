@@ -1,10 +1,9 @@
+use anyhow::Result;
 use serde::{Deserialize, Serialize};
 use std::fs;
 use std::path::Path;
-use anyhow::Result;
-
-pub use serde_json::Value;
-pub use std::collections::HashMap;
+use serde_json::Value;
+use std::collections::HashMap;
 
 pub const HELLO: &str = "hello world";
 
@@ -33,13 +32,10 @@ pub enum System {
 }
 
 impl StructuredAttrs {
-    async fn get() -> Result<Self> {
+    pub fn from_cwd() -> Self {
         let attrs_json_file: &Path = Path::new("./.attrs.json");
-
         let data: String = fs::read_to_string(attrs_json_file).expect("Unable to read file");
-
-        let value: StructuredAttrs = serde_json::from_str(&data).expect("JSON does not have correct format.");
-
-        Result::Ok(value)
+        let value: Self = serde_json::from_str(&data).expect("JSON does not have correct format.");
+        return value;
     }
 }

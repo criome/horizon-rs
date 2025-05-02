@@ -5,4 +5,4 @@ edition = "2024"
 
 [dependencies]
 horizon-lib.workspace = true
-
+serde_json.workspace = true
