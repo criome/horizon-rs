@@ -1,9 +1,9 @@
 use anyhow::Result;
 use serde::{Deserialize, Serialize};
-use std::fs;
-use std::path::Path;
 use serde_json::Value;
 use std::collections::HashMap;
+use std::fs;
+use std::path::Path;
 
 pub const HELLO: &str = "hello world";
 
@@ -13,8 +13,20 @@ pub struct StructuredAttrs {
     builder: Box<Path>,
     system: System,
 
+    #[serde(default)]
+    args: Args,
+
     #[serde(flatten)]
     attrs: HashMap<String, Value>,
+}
+
+#[derive(Serialize, Deserialize)]
+struct Args(Vec<String>);
+
+impl Default for Args {
+    fn default() -> Self {
+        Self(Vec::new())
+    }
 }
 
 #[derive(Serialize, Deserialize)]
