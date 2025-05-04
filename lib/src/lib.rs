@@ -36,6 +36,13 @@ pub enum System {
     AvrLinux,
 }
 
+#[derive(Serialize, Deserialize)]
+pub struct OutputFile(Box<Path>);
+
+impl OutputFile {
+    pub fn from_env() -> Self {}
+}
+
 impl StructuredAttrs {
     pub fn from_cwd() -> Self {
         let attrs_json_file: &Path = Path::new("./.attrs.json");
