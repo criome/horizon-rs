@@ -1,4 +1,3 @@
-use anyhow::Result;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 use std::collections::HashMap;
@@ -20,14 +19,8 @@ pub struct StructuredAttrs {
     attrs: HashMap<String, Value>,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Default, Serialize, Deserialize)]
 struct Args(Vec<String>);
-
-impl Default for Args {
-    fn default() -> Self {
-        Self(Vec::new())
-    }
-}
 
 #[derive(Serialize, Deserialize)]
 pub enum System {
