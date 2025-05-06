@@ -39,8 +39,22 @@ pub enum System {
 #[derive(Serialize, Deserialize)]
 pub struct OutputFile(Box<Path>);
 
-impl OutputFile {
-    pub fn from_env() -> Self {}
+use std::fs::File;
+use std::io::Write;
+
+impl Default for OutputFile {
+    pub fn default() -> Self {
+	let out_str = std::env::var("out")?;
+	let path = Path::new(out_str);
+    }
+}
+
+impl Write for OutputFile {
+    pub fn write(data) -> () {
+        let mut opened_file = File::create(self.0)?;
+        opened_file.write_all(&data)?;
+        Ok(())
+    }
 }
 
 impl StructuredAttrs {
