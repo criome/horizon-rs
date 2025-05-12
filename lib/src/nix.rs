@@ -56,15 +56,17 @@ impl Default for OutputFile {
         // TODO
         let output_dir_str = nix_out_str + "/etc";
         let out_path_str = output_dir_str + "/horizon.json";
-        let mut file: File = File::create(Path::new(&out_path_str)).expect("Error");
+        let file: File = File::create(Path::new(&out_path_str)).expect("Error");
         OutputFile(file)
     }
 }
 
 impl Write for OutputFile {
     fn write(&mut self, data: &[u8]) -> Result<usize, Error> {
-        let mut_file: File = self.0;
-        let nb_of_written_bytes = mut_file.write(&data)?;
-        Ok(nb_of_written_bytes)
+        self.0.write(&data)
+    }
+
+    fn flush(&mut self) -> Result<(), Error> {
+        self.0.flush()
     }
 }
