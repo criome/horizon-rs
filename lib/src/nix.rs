@@ -1,12 +1,11 @@
 // TODO: Move some of this to a Nix library crate
 
-use anyhow::Result;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 use std::collections::HashMap;
 use std::fs;
 use std::fs::File;
-use std::io::Write;
+use std::io::{Error, Write};
 use std::path::Path;
 
 #[derive(Serialize, Deserialize)]
@@ -39,8 +38,8 @@ pub enum System {
     AvrLinux,
 }
 
-#[derive(Serialize, Deserialize)]
-pub struct OutputFile(Box<Path>);
+#[derive(Debug)]
+pub struct OutputFile(File);
 
 impl StructuredAttrs {
     pub fn from_cwd() -> Self {
@@ -57,15 +56,15 @@ impl Default for OutputFile {
         // TODO
         let output_dir_str = nix_out_str + "/etc";
         let out_path_str = output_dir_str + "/horizon.json";
-        let path: OutputFile = OutputFile(Box::from(Path::new(&out_path_str)));
-        path
+        let mut file: File = File::create(Path::new(&out_path_str)).expect("Error");
+        OutputFile(file)
     }
 }
 
 impl Write for OutputFile {
-    pub fn write(data: [u8]) -> () {
-        let mut opened_file = File::create(self.0)?;
-        opened_file.write_all(&data)?;
-        Ok(())
+    fn write(&mut self, data: &[u8]) -> Result<usize, Error> {
+        let mut_file: File = self.0;
+        let nb_of_written_bytes = mut_file.write(&data)?;
+        Ok(nb_of_written_bytes)
     }
 }
