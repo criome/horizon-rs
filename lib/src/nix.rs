@@ -13,12 +13,24 @@ pub struct StructuredAttrs {
     name: String,
     builder: Box<Path>,
     system: System,
+    outputs: Outputs,
 
     #[serde(default)]
     args: Args,
 
     #[serde(flatten)]
     attrs: HashMap<String, Value>,
+}
+
+#[derive(Default, Serialize, Deserialize)]
+struct Outputs(HashMap<String, Output>);
+
+#[derive(Default, Serialize, Deserialize)]
+struct Output {
+    path: Option<String>,
+    method: Option<String>,
+    hash_algo: Option<String>,
+    hash: Option<String>,
 }
 
 #[derive(Default, Serialize, Deserialize)]
@@ -58,6 +70,23 @@ impl Default for OutputFile {
         let out_path_str = output_dir_str + "/horizon.json";
         let file: File = File::create(Path::new(&out_path_str)).expect("Error");
         OutputFile(file)
+    }
+}
+
+impl TryFrom<StructuredAttrs> for OutputFile {
+    type Error = &'static str;
+
+    fn try_from(value: StructuredAttrs) -> Result<Self, Self::Error> {
+        let out_path_str = (value
+            .outputs
+            .0
+            .get("out")
+            .expect("Error: missing `out` output"))
+        .path
+        .clone()
+        .expect("");
+        let file: File = File::create(Path::new(&out_path_str)).expect("Error");
+        Ok(OutputFile(file))
     }
 }
 
