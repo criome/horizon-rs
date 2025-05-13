@@ -13,13 +13,13 @@ pub struct StructuredAttrs {
     name: String,
     builder: Box<Path>,
     system: System,
-    outputs: Outputs,
+    outputs: HashMap<String, String>,
 
     #[serde(default)]
     args: Args,
 
     #[serde(flatten)]
-    attrs: HashMap<String, Value>,
+    pub attrs: HashMap<String, Value>,
 }
 
 #[derive(Default, Serialize, Deserialize)]
@@ -77,14 +77,10 @@ impl TryFrom<StructuredAttrs> for OutputFile {
     type Error = &'static str;
 
     fn try_from(value: StructuredAttrs) -> Result<Self, Self::Error> {
-        let out_path_str = (value
+        let out_path_str = value
             .outputs
-            .0
             .get("out")
-            .expect("Error: missing `out` output"))
-        .path
-        .clone()
-        .expect("");
+            .expect("Error: missing `out` output");
         let file: File = File::create(Path::new(&out_path_str)).expect("Error");
         Ok(OutputFile(file))
     }
