@@ -1,2 +1,2 @@
-pub mod nix;
 pub mod horizon;
+pub mod nix;
